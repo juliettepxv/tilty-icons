@@ -1,0 +1,29 @@
+{
+  "name": "@juliettepxv/tilty-icons",
+  "version": "0.0.1",
+  "private": false,
+  "main":     "./lib/icons.js",
+  "types":    "./lib/icons.d.ts",
+  "files": [
+    "/lib",
+    "/types"
+  ],
+  "scripts": {
+    "svgo":         "svgo -f ./src/svgs -o ./src/svgs-opti",
+    "ts-doc":       "npx -p typescript tsc ./lib/icons.js --declaration --allowJs --emitDeclarationOnly --outDir lib",
+    "build":        "npm run svgo && php builder.php && npm run ts-doc",
+    "publish-lib":  "npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juliettepxv/tilty-icons.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.3",
+    "svgo": "^3.0.2",
+    "typescript": "^5.1.6"
+  }
+}

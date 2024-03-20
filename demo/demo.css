@@ -1,0 +1,41 @@
+.icons-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.icons-container .ico-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.icons-container .ico-preview .ico {
+  position: relative;
+  top: 2px;
+}
+.icons-container .ico-preview .hover {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--neutral-50);
+  gap: 15px;
+  padding: 15px;
+  border-radius: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 35px 45px var(--neutral-400-50);
+  flex-direction: column;
+}
+.icons-container .ico-preview .hover * {
+  width: 100%;
+}
+.icons-container .ico-preview:hover .hover {
+  display: block;
+  display: flex;
+}
+
+/*# sourceMappingURL=demo.css.map */
